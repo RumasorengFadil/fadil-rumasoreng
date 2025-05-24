@@ -21,11 +21,11 @@ const ProjectSection: React.FC<ProjectsListProps> = ({
     projects,
 }) => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-    const { refElement } = useSyncedIntersection({ threshold: 0.1, rootMargin:"0px 0px -300px 0px" });
+    const { refElement } = useSyncedIntersection({ threshold: 0.1, rootMargin: "0px 0px -300px 0px" });
 
     return (
         <div id="projects" ref={refElement} className="flex flex-col space-y-4">
-            <div className="font-semibold z-10 sticky top-0 bg-primary py-4 lg:hidden">PROJECTS</div>
+            <div className="font-bold z-50 sticky top-0 bg-primary py-4 text-lg">PROJECTS</div>
 
             <div className="flex flex-col space-y-12">
                 {projects.map(({ title, description, skills, link, image }, i) => (
@@ -56,7 +56,10 @@ const ProjectSection: React.FC<ProjectsListProps> = ({
                     </Link>
                 ))}
             </div>
-            <p className="font-medium cursor-pointer">View Full Resume {"->"}</p>
+            <div className="flex items-center space-x-1 group font-medium cursor-pointer underline">
+                <p>View Full Resume</p>
+                <div className="transition-all group-hover:translate-x-2">{"->"}</div>
+            </div>
         </div>
     );
 };

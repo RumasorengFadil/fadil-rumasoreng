@@ -28,7 +28,7 @@ export const experiences = [
   },
   {
     time: "JULY-OCT 2024",
-    title: "Fullstack Developer, PT. Cazh Texhnology",
+    title: "Fullstack Developer, PT. Cazh Technology",
     description:
       "Worked as a Fullstack Developer, contributing to the development of a Learning Management System (LMS) using Laravel and React.js. Collaborated closely with a cross-functional team to build robust, scalable features that supported the company's internal training and educational platform. Played an active role in both frontend and backend development, ensuring seamless user experience and efficient data handling across the system.",
     skills: ["Javascript", "ReactJS", "Laravel", "Zustand"],

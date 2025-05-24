@@ -5,9 +5,12 @@ const AboutMeSection = () => {
   const { refElement } = useSyncedIntersection({ threshold: 0.2, rootMargin:"-200px 0px 0px 0px" });
 
   return (
-    <div ref={refElement} id="about" className="flex flex-col space-y-8 lg:space-y-0 lg:items-center lg:flex-row lg:min-h-screen">
-      <div className="font-semibold sticky top-0 bg-primary py-4 lg:hidden">ABOUT</div>
+    <div ref={refElement} id="about" className="flex flex-col space-y-8 lg:space-y-0 justify-center lg:min-h-screen">
+      <div className="font-bold sticky top-0 bg-primary py-4 text-lg">ABOUT ME</div>
+      <span></span>
       <p>
+        <span className="font-semibold">Hello 👋,</span>
+        <br />
         I&apos;m a Fullstack Developer who finds <b>beauty</b> and <b>artistry</b> in writing code.
         I&apos;m passionate about building real-world products that not only function well but also embody thoughtful design and clean engineering.
         To me, coding is more than just logic — it&apos;s a form of expression that balances precision with creativity.
