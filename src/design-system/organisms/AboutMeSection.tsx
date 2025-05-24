@@ -20,7 +20,7 @@ const AboutMeSection = () => {
         <br />
         <br />
         Outside of work, I enjoy hanging out with friends, reading, gaming, and staying active through sports.
-        Whether I'm debugging a component or exploring new game mechanics, I’m always driven by curiosity and a desire to learn.
+        Whether I&apos;m debugging a component or exploring new game mechanics, I’m always driven by curiosity and a desire to learn.
       </p>
     </div>
   );
