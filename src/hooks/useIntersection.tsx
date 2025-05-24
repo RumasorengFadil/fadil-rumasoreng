@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, RefObject, MutableRefObject } from "react";
+import { useEffect, useRef, useState, RefObject } from "react";
 
 interface UseIntersectionOptions {
   root?: Element | null;

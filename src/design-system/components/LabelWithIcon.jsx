@@ -1,5 +1,4 @@
 export default function LabelWithIcon({
-    active = false,
     className = "",
     children,
     label = "label",
