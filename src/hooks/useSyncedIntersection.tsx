@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { useIntersection } from "@/hooks/useIntersection";
 import useIntersectionStore from "@/store/intersectionStore";
 
-export const useSyncedIntersection = ({threshold = 0.4}:{threshold:number}) => {
-  const { refElement, isIntersecting } = useIntersection<HTMLDivElement>({ threshold });
+export const useSyncedIntersection = ({threshold = 0.4, rootMargin=""}:{threshold:number, rootMargin?:string}) => {
+  const { refElement, isIntersecting } = useIntersection<HTMLDivElement>({ threshold, rootMargin });
   const { setRefElement, setIsIntersecting } = useIntersectionStore();
 
   useEffect(() => {

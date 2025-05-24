@@ -21,7 +21,7 @@ const ProjectSection: React.FC<ProjectsListProps> = ({
     projects,
 }) => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-    const { refElement } = useSyncedIntersection({threshold:0.4});
+    const { refElement } = useSyncedIntersection({ threshold: 0.1, rootMargin:"0px 0px -300px 0px" });
 
     return (
         <div id="projects" ref={refElement} className="flex flex-col space-y-4">

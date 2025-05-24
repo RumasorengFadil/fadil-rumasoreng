@@ -2,7 +2,7 @@
 import { useSyncedIntersection } from "@/hooks/useSyncedIntersection";
 
 const AboutMeSection = () => {
-  const { refElement } = useSyncedIntersection({ threshold: 0.7 });
+  const { refElement } = useSyncedIntersection({ threshold: 0.2, rootMargin:"-200px 0px 0px 0px" });
 
   return (
     <div ref={refElement} id="about" className="flex flex-col space-y-8 lg:space-y-0 lg:items-center lg:flex-row lg:min-h-screen">

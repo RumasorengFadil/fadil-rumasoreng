@@ -22,7 +22,7 @@ const ExperienceSection: React.FC<ExperienceListProps> = ({
     experiences,
 }) => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-    const { refElement } = useSyncedIntersection({ threshold: 0.2 });
+    const { refElement } = useSyncedIntersection({ threshold: 0.1, rootMargin:"0px 0px -200px 0px" });
 
 
     return (
