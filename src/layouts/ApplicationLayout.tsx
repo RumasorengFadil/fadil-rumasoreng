@@ -26,19 +26,19 @@ const ApplicationLayout: React.FC<ApplicationLayoutProps> = memo(function Applic
     <>
       <div className="w-full lg:h-screen bg-mint-500 font-inter flex flex-col lg:flex-row">
         {header && (
-          <div className={`flex bg-secondary flex-col lg:w-max lg:space-y-5 px-6 lg:px-20 py-10 lg:overflow-hidden ${headerClassName}`}>
+          <header className={`flex bg-secondary flex-col lg:w-max lg:space-y-5 px-6 lg:px-20 py-10 lg:overflow-hidden ${headerClassName}`}>
             {header}
-          </div>
+          </header>
         )}
 
         {content && (
-          <div className={`flex flex-col h-full flex-1 bg-primary space-y-16 px-6 lg:px-20 lg:space-y-8 lg:overflow-y-auto scroll-smooth ${contentClassName}`}>
+          <main className={`flex flex-col h-full flex-1 bg-primary space-y-16 px-6 lg:px-20 lg:space-y-8 lg:overflow-y-auto scroll-smooth ${contentClassName}`}>
             {content}
-          </div>
+          </main>
         )}
 
         {footer && (
-          <div className={`flex flex-col space-y-8 py-10 bg-tertiary px-10 ${footerClassName}`}>
+          <footer className={`flex flex-col space-y-8 py-10 bg-tertiary px-10 ${footerClassName}`}>
             {typeof footer === "object" && "content" in footer && "copyright" in footer ? (
               <>
                 <div className="flex flex-col overflow-hidden space-y-8 text-black sm:space-x-4 sm:space-y-0 sm:flex-row">
@@ -49,7 +49,7 @@ const ApplicationLayout: React.FC<ApplicationLayoutProps> = memo(function Applic
             ) : (
               <>{footer}</>
             )}
-          </div>
+          </footer>
         )}
       </div>
     </>
