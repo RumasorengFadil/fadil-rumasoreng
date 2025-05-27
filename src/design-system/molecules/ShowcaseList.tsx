@@ -13,9 +13,10 @@ export type ShowcaseItem = {
 
 type ShowcaseListProps = {
   items: ShowcaseItem[];
+  directionWhenViewSm?:string;
 };
 
-const ShowcaseList = ({ items }: ShowcaseListProps) => {
+const ShowcaseList = ({ items, directionWhenViewSm="row" }: ShowcaseListProps) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
@@ -27,7 +28,7 @@ const ShowcaseList = ({ items }: ShowcaseListProps) => {
           key={i}
           onMouseEnter={() => setHoveredIndex(i)}
           onMouseLeave={() => setHoveredIndex(null)}
-          className={`group flex flex-col-reverse gap-4 transition-all sm:p-4 rounded-md cursor-pointer sm:flex-row sm:gap-0 sm:space-x-10
+          className={`group flex flex-col-reverse gap-4 transition-all sm:p-4 rounded-md cursor-pointer sm:flex-${directionWhenViewSm} sm:gap-0 sm:space-x-10
             ${hoveredIndex !== i && hoveredIndex !== null ? "lg:opacity-40" : ""}
             ${hoveredIndex === i ? "lg:bg-slate-400 lg:shadow-lg" : ""}
           `}
