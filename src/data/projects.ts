@@ -1,4 +1,6 @@
-export const projects = [
+import ProjectsListProps from "@/typedata/ProjectListProps";
+
+export const projects:ProjectsListProps[] = [
   {
     title: "Catur Jawa Traditional Games",
     description:

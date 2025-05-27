@@ -1,32 +1,19 @@
 "use client"
 import React, { useState } from "react";
 import Link from "next/link";
-import SkillBadgeList from "../components/SkillBadgeList";
 import Image from "next/image";
 import { useSyncedIntersection } from "@/hooks/useSyncedIntersection";
 import { SectionTitle } from "../components/SectionTitle";
+import ProjectsListProps from "@/typedata/ProjectListProps";
+import ShowcaseItemContent from "../molecules/ShowCaseItemContent";
 
-type Projects = {
-    title: string;
-    description: string;
-    skills: string[];
-    link: string;
-    image?: string;
-};
-
-type ProjectsListProps = {
-    projects: Projects[];
-};
-
-const ProjectSection: React.FC<ProjectsListProps> = ({
-    projects,
-}) => {
+const ProjectSection = ({ projects }: { projects: ProjectsListProps[] }) => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const { refElement } = useSyncedIntersection({ threshold: 0.1, rootMargin: "0px 0px -300px 0px" });
 
     return (
         <div id="projects" ref={refElement} className="flex flex-col space-y-4">
-             <SectionTitle className="sticky top-0 z-10 bg-primary py-4" title="PROJECTS" />
+            <SectionTitle className="sticky top-0 z-10 bg-primary py-4" title="PROJECTS" />
 
 
             <div className="flex flex-col space-y-12">
@@ -45,16 +32,12 @@ const ProjectSection: React.FC<ProjectsListProps> = ({
                             <Image className="rounded-lg border-2 border-slate-500" src={"/" + image} alt={title} fill priority />
                         </div>
 
-                        <div className="flex flex-col flex-1 space-y-3">
-                            <div className="flex items-center space-x-1 text-lg font-semibold">
-                                <h1>{title}</h1>
-                                <span className={`transition-all ${hoveredIndex === i ? "translate-x-2" : ""}`}>
-                                    {"->"}
-                                </span>
-                            </div>
-                            <p>{description}</p>
-                            <SkillBadgeList skills={skills} />
-                        </div>
+                        <ShowcaseItemContent
+                            title={title}
+                            description={description}
+                            skills={skills}
+                            isHovered={hoveredIndex === i}
+                        />
                     </Link>
                 ))}
             </div>

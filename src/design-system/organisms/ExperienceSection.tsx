@@ -1,10 +1,10 @@
 "use client"
 import React, { useState } from "react";
 import Link from "next/link";
-import SkillBadgeList from "../components/SkillBadgeList";
 import Image from "next/image";
 import { useSyncedIntersection } from "@/hooks/useSyncedIntersection";
 import { SectionTitle } from "../components/SectionTitle";
+import ShowcaseItemContent from "../molecules/ShowCaseItemContent";
 
 type Experience = {
     time: string;
@@ -50,16 +50,12 @@ const ExperienceSection: React.FC<ExperienceListProps> = ({
                             </div>
                         </div>
 
-                        <div className="flex flex-col flex-1 space-y-3">
-                            <div className="flex items-center space-x-1 text-lg font-semibold">
-                                <h1>{title}</h1>
-                                <span className={`transition-all ${hoveredIndex === i ? "translate-x-2" : ""}`}>
-                                    {"->"}
-                                </span>
-                            </div>
-                            <p>{description}</p>
-                            <SkillBadgeList skills={skills} />
-                        </div>
+                        <ShowcaseItemContent
+                            title={title}
+                            description={description}
+                            skills={skills}
+                            isHovered={hoveredIndex === i}
+                        />
                     </Link>
                 ))}
             </div>
