@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import CustomCursor from "@/design-system/components/CustomCursor";
 
 
 const geistSans = localFont({
