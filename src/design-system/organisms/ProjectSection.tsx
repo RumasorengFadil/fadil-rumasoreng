@@ -35,7 +35,7 @@ const ProjectSection: React.FC<ProjectsListProps> = ({
                         key={i}
                         onMouseEnter={() => setHoveredIndex(i)}
                         onMouseLeave={() => setHoveredIndex(null)}
-                        className={`group flex flex-col-reverse gap-4 transition-all lg:p-4 rounded-md cursor-pointer lg:flex-row lg:gap-0 lg:space-x-10
+                        className={`group flex flex-col-reverse gap-4 transition-all sm:p-4 rounded-md cursor-pointer sm:flex-row sm:gap-0 sm:space-x-10
             ${hoveredIndex !== i && hoveredIndex !== null ? "lg:opacity-40" : ""}
             ${hoveredIndex === i ? "lg:bg-slate-400 lg:shadow-lg" : ""}
           `}>
