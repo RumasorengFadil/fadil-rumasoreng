@@ -27,7 +27,7 @@ const ExperienceSection: React.FC<ExperienceListProps> = ({
 
     return (
         <div id="experience" ref={refElement} className="flex flex-col space-y-4">
-            <div className="font-bold sticky top-0 z-10 bg-primary py-4">EXPERIENCES</div>
+            <div className="font-bold sticky top-0 z-10 bg-primary py-4 text-lg">EXPERIENCES</div>
 
             <div className="flex flex-col space-y-12">
                 {experiences.map(({ time, title, description, skills, link, logo }, i) => (
