@@ -6,8 +6,13 @@ import { HeroSection } from "@/design-system/organisms/HeroSection";
 import ProjectSection from "@/design-system/organisms/ProjectSection";
 import TechStackInfoSection from "@/design-system/organisms/TechStackInfoSection";
 import ApplicationLayout from "@/layouts/ApplicationLayout";
+import { homeMetaData } from "@/metadata/homepage";
+import { Metadata } from "next";
+
+export const metadata:Metadata = homeMetaData;
 
 export default function Home() {
+  
   const header = <>
     <HeroSection />
   </>
