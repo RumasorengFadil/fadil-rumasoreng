@@ -4,6 +4,7 @@ import Link from "next/link";
 import SkillBadgeList from "../components/SkillBadgeList";
 import Image from "next/image";
 import { useSyncedIntersection } from "@/hooks/useSyncedIntersection";
+import { SectionTitle } from "../components/SectionTitle";
 
 type Experience = {
     time: string;
@@ -27,7 +28,7 @@ const ExperienceSection: React.FC<ExperienceListProps> = ({
 
     return (
         <div id="experience" ref={refElement} className="flex flex-col space-y-4">
-            <div className="font-bold sticky top-0 z-10 bg-primary py-4 text-lg">EXPERIENCES</div>
+            <SectionTitle className="sticky top-0 z-10 bg-primary py-4" title="EXPERIENCES" />
 
             <div className="flex flex-col space-y-12">
                 {experiences.map(({ time, title, description, skills, link, logo }, i) => (

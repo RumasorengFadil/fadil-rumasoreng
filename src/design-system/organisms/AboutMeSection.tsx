@@ -1,12 +1,14 @@
 "use client"
 import { useSyncedIntersection } from "@/hooks/useSyncedIntersection";
+import { SectionTitle } from "../components/SectionTitle";
 
 const AboutMeSection = () => {
-  const { refElement } = useSyncedIntersection({ threshold: 0.2, rootMargin:"-200px 0px 0px 0px" });
+  const { refElement } = useSyncedIntersection({ threshold: 0.2, rootMargin: "-200px 0px 0px 0px" });
 
   return (
     <div ref={refElement} id="about" className="flex flex-col space-y-4 lg:space-y-0 justify-center lg:min-h-screen">
-      <div className="font-bold sticky top-0 bg-primary py-4 text-lg">ABOUT ME</div>
+      <SectionTitle className="sticky top-0 z-10 bg-primary py-4" title="ABOUT ME" />
+
       <p>
         <span className="font-semibold">Hello 👋,</span>
         <br />

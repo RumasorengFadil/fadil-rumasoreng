@@ -4,6 +4,7 @@ import Link from "next/link";
 import SkillBadgeList from "../components/SkillBadgeList";
 import Image from "next/image";
 import { useSyncedIntersection } from "@/hooks/useSyncedIntersection";
+import { SectionTitle } from "../components/SectionTitle";
 
 type Projects = {
     title: string;
@@ -25,7 +26,8 @@ const ProjectSection: React.FC<ProjectsListProps> = ({
 
     return (
         <div id="projects" ref={refElement} className="flex flex-col space-y-4">
-            <div className="font-bold z-50 sticky top-0 bg-primary py-4 text-lg">PROJECTS</div>
+             <SectionTitle className="sticky top-0 z-10 bg-primary py-4" title="PROJECTS" />
+
 
             <div className="flex flex-col space-y-12">
                 {projects.map(({ title, description, skills, link, image }, i) => (
