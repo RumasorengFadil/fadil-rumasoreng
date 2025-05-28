@@ -61,7 +61,7 @@ const ExperienceSection: React.FC<ExperienceListProps> = ({
             </div>
 
             <div className="flex items-center space-x-1 group font-medium cursor-pointer underline">
-                <Link href="/file/CV_Fadil Hijayat Rumasoreng.pdf" download>View Full Resume</Link>
+                <Link href="/file/CV_Fadil Hijayat Rumasoreng.pdf">View Full Resume</Link>
                 <div className="transition-all group-hover:translate-x-2">{"->"}</div>
             </div>
         </div>
